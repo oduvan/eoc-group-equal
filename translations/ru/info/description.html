@@ -1,0 +1,49 @@
+<!-- Describe task in general -->
+
+<p>
+    Имея список элементов, создайте и верните список, элементы которого являются списками, которые содержат последовательные серии одинаковых элементов исходного списка. Обратите внимание, что элементы, которые не дублируются в исходном списке, должны в результате стать одноэлементными списками, чтобы каждый элемент был включен в итоговый список списков.
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Входные данные: </strong> 
+    {% if interpreter.slug == "js-node" %}
+        Массив строк (strs) и целых чисел (ints).
+    {% else %}
+        Список строк (strs) и целых чисел (ints).
+    {% endif %}
+</p>
+
+<p>
+    <strong>Выходные данные: </strong> {% if interpreter.slug == "js-node" %}
+        Массив массивов строк (strs) и целых чисел (ints).
+    {% else %}
+        Список списков строк (strs) и целых чисел (ints).
+    {% endif %}
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Пример:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+groupEqual([1, 1, 4, 4, 4, "hello", "hello", 4]) == [[1,1],[4,4,4],["hello","hello"],[4]]
+groupEqual([1, 2, 3, 4]) == [[1], [2], [3], [4]]
+groupEqual([1]) == [[1]]
+groupEqual([]) == []
+</pre>
+{% else %}
+<pre class="brush: python">
+group_equal([1, 1, 4, 4, 4, "hello", "hello", 4]) == [[1,1],[4,4,4],["hello","hello"],[4]]
+group_equal([1, 2, 3, 4]) == [[1], [2], [3], [4]]
+group_equal([1]) == [[1]]
+group_equal([]) == []
+</pre>
+{% endif %}
+</div>
+
+<p><i>Миссия была взята из Python CCPS 109 Fall 2018. Она преподается в Школе непрерывного образования им. Райерсона Чанга <a href="http://www.scs.ryerson.ca/~ikokkari/">Илккой Коккариненом</a></i></p>
