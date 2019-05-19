@@ -1,19 +1,17 @@
-"use strict";
 
-function groupEqual(els) {
+export function groupEqual(els: any[]) {
     // your code here
     return els;
 }
 
-var assert = require('assert');
-if (!global.is_checking) {
-    console.log('Example:');
-    console.log(groupEqual([1, 1, 4, 4, 4, "hello", "hello", 4]));
+import * as assert from 'assert';
 
-    // These "asserts" are used for self-checking and not for an auto-testing
-    assert.deepEqual(groupEqual([1, 1, 4, 4, 4, "hello", "hello", 4]), [[1,1],[4,4,4],["hello","hello"],[4]]);
-    assert.deepEqual(groupEqual([1, 2, 3, 4]), [[1], [2], [3], [4]]);
-    assert.deepEqual(groupEqual([1]), [[1]])
-    assert.deepEqual(groupEqual([]), [])
-    console.log("Coding complete? Click 'Check' to earn cool rewards!");
-}
+console.log('Example:');
+console.log(groupEqual([1, 1, 4, 4, 4, "hello", "hello", 4]));
+
+// These "asserts" are used for self-checking and not for an auto-testing
+assert.deepEqual(groupEqual([1, 1, 4, 4, 4, "hello", "hello", 4]), [[1,1],[4,4,4],["hello","hello"],[4]]);
+assert.deepEqual(groupEqual([1, 2, 3, 4]), [[1], [2], [3], [4]]);
+assert.deepEqual(groupEqual([1]), [[1]])
+assert.deepEqual(groupEqual([]), [])
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
